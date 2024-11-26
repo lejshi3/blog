@@ -19,7 +19,14 @@ here you can find me talk about my projects, interests, ideas, or anything else 
 
 ---
 
-## links
-[2024.09.25 pop music](/posts/pop-music)
+<div class="float-container">
+    <div class="floating-box skewed">
+        <h2>reach out!</h2>
+        <p>want to talk? message me on <a href="https://discord.com">discord</a>!</p>
+        <p>@jshi3</p>
+    </div>
+</div>
 
-2024.10.25 voting in kansas
+## Posts
+
+Sep 25 '24 - [hello!](/posts/hello/)
