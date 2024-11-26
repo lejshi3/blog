@@ -20,6 +20,7 @@ here you can find me talk about my projects, interests, ideas, or anything else 
 ---
 
 bluesky: [@jshi3.xyz](https://bsky.app/profile/jshi3.xyz)
+
 github: [@lejshi3](https://github.com/lejshi3)
 
 <div class="float-container">
