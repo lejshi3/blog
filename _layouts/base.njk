@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="/src/main.js"></script>
+    <meta charset="utf-8">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/index.html"><img src="img/logo.svg"></a>
+        </div>
+    </header>
+    <main>
+        <div class="page-sidebar">
+            <h3>last edit: {{ page.date | formatDateTime }}</h3>
+            <span class="filler"></span>
+            <h3><a href="index.html">~</a></h3>
+        </div>
+        <div class="page-content">
+            {{ content | safe }}
+        </div>
+    </main>
+</body>
+</html>

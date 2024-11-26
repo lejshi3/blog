@@ -1,0 +1,310 @@
+// font
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&display=swap');
+
+
+// colors
+$primary-color: #C73333;
+$secondary-color: #C75555;
+$dark-1: #161616;
+$dark-2: #424242;
+$neutral: #6e6e6e;
+$light-2: #9a9a9a;
+$light-1: #c6c6c6;
+
+// fonts
+$font-stack:  
+    "Atkinson Hyperlegible", 
+    "Roboto", 
+    "Arial", 
+    "Helvetica", 
+    sans-serif;
+
+$mono-font-stack:
+    "Overpass Mono",
+    "Roboto Mono",
+    monospace;
+
+// breakpoints
+$mobile-width: 400px;
+$reduced-width: 600px;
+$full-width: 800px;
+
+body {
+    font-family: $font-stack;
+    background-color: $dark-1;
+    color: $light-1;
+    min-height: 100vh;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0px;
+}
+
+header {
+    display: flex;
+    margin: 8px 12px 0px 12px;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+
+    * {
+        
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+
+
+        &.logo {
+            img {
+                flex: 0;
+                height: 24px;
+                margin: 2px 4px;
+                padding: 4px 4px 12px 4px;
+            }
+        }
+        &.links {
+            flex: 1;
+
+            a {
+                flex: 1;
+
+                padding: 4px 16px 4px 16px;
+                margin: 2px 4px 4px 4px;
+                height: 100%;
+
+                border-radius: 4px 4px 4px 4px;
+                
+                display: flex;
+                align-items: center;
+
+                color: $light-1;
+
+                font-size: 13pt;
+                font-weight: normal;
+                
+                &:hover {
+                    background-color: $light-2;
+                    color: $dark-1;
+                }
+
+                &.current-page, &:active {
+                    padding: 4px 16px 8px 16px;
+                    margin: 2px 4px -2px 4px;
+                    height: 100%;
+
+                    border-radius: 4px 4px 0px 0px;
+                }
+                
+                &:active {
+                    background-color: $neutral;
+                    color: $dark-1;
+                }
+
+                &.current-page {
+                    background-color: $light-1;
+                    color: $dark-1;
+                    z-index: 1;
+                }
+            }
+        }       
+    }
+}
+
+main {
+    display: flex;
+    flex: 1;
+    margin: 0px 12px 12px 12px;
+
+    border-radius: 8px;
+    border: solid 4px $light-1;
+    background-color: $light-1;
+    color: $dark-1;
+    box-shadow: $light-2 4px 4px;
+
+    gap: 2px;
+    overflow: hidden;
+
+    max-width: 768px;
+
+    h1, h2, h3, p {
+        word-wrap: break-word;
+        word-break: normal;
+        margin-left: 0;
+        margin-right: 8px;
+
+        display: block;
+    }
+    
+    h1 {
+        color: $primary-color;
+        line-height: 0.8;
+        font-size: 26pt;
+        margin-top: 26pt;
+        margin-bottom: 13pt;
+    }
+
+    h2 {
+        color: $dark-1;
+        font-size: 18pt;
+        margin: 16pt initial;
+    }
+
+    p {
+        color: $dark-1;
+        font-size: 13pt;
+        margin: 10pt initial;
+    }
+
+    h3 {
+        font-family: $mono-font-stack;
+    }
+
+    hr {
+        border: dashed 1px $primary-color;
+        width: 50%;
+        height: 0;
+        margin: 24pt auto;
+        padding: 0;
+    }
+
+    br {
+        margin: 12pt auto;
+    }
+
+    div {
+        border-radius: 4px;
+
+        &.page-content {
+            flex: 2;
+            margin: 24px;
+            max-width: 38rem;
+
+            a {
+                color: $primary-color;
+
+                &:visited {
+                    color: $secondary-color;
+                }
+
+                &:active {
+                    color: $dark-2;
+                }
+
+                &:hover {
+                    color: $dark-1
+                }
+            }
+
+            div.float-container {
+                display: block;
+                float: right;
+
+                align-items: center;
+                justify-content: center;
+
+                width: 42%;
+                margin: 24px;
+
+                @media (max-width: $reduced-width) {
+                    float: none;
+                    display: flex;
+                    width: 100%;
+                    margin: auto;
+                }
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 4px;
+                    box-shadow: 4px 4px $neutral;
+                    
+                    &.skewed {
+                        transform: rotate(2deg);
+                    }
+
+                    @media (max-width: $reduced-width) {
+                        width: 85%;
+                        
+                        &.skewed {
+                            transform: rotate(0deg);
+                        }
+                    }
+                }
+
+                div.floating-box {
+                    width: 90%;
+                    background-color: $dark-2;
+                    box-shadow: 4px 4px $neutral;
+                    padding: 8px 16px;
+                    border-radius: 4px;
+                    box-shadow: 2px;
+                    margin: 0;
+
+                    &.skewed {
+                        transform: rotate(-2deg);
+                    }
+
+                    h1, h2, p {
+                        color: $light-1;
+                        margin-right: 0;
+                    }
+                    
+                    a {
+                        color: $primary-color;
+        
+                        &:visited {
+                            color: $secondary-color;
+                        }
+        
+                        &:active {
+                            color: $neutral;
+                        }
+        
+                        &:hover {
+                            color: $light-2
+                        }
+                    }
+            }
+
+
+            }
+        }
+
+        &.page-sidebar {
+            display: flex;
+            flex: 0 0 36px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            background-color: $primary-color;
+            color: $light-1;
+            border-radius: 4px;
+
+            h3 { 
+                writing-mode: vertical-lr;
+                transform: rotate(180deg);
+                margin: 0;
+                padding: 12px 6px 12px 2px;
+                flex: 0 0 auto;
+
+                a {
+                    color: $light-1;
+                    text-decoration: none;
+                }
+            }
+
+            span.filler {
+                flex: 1;
+            }
+        }
+    }
+
+}

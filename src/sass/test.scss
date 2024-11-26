@@ -1,0 +1,144 @@
+// Variables
+$background-color: #222;
+$text-color: #eee;
+$infobox-bg: #666;
+$infobox-header-bg: #c70000;
+$infobox-section-bg: #555;
+$infobox-label-bg: #444;
+$border-color: #777;
+$border-radius: 2px;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: $background-color;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.infobox {
+  background-color: $infobox-bg;
+  color: $text-color;
+  border-radius: $border-radius;
+  display: flex;
+  flex-direction: column;
+  float: right;
+  gap: 2px;
+  margin: 4px;
+  padding: 4px;
+  width: 386px;
+
+  p {
+    margin: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  &-header {
+    background-color: $infobox-header-bg;
+    border-radius: $border-radius;
+    padding: 2px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &-section {
+    margin: 0px;
+    background-color: $infobox-section-bg;
+    border-radius: $border-radius;
+  }
+
+  &-row {
+    display: flex;
+    border-bottom: 1px solid $border-color;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &-label {
+    width: 25%;
+    padding: 8px;
+    font-weight: bold;
+    background-color: $infobox-label-bg;
+  }
+
+  &-data {
+    width: 75%;
+    padding: 8px;
+  }
+
+  &-figure {
+    width: 100%;
+    margin: 0;
+    padding: 4px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      text-align: center;
+      padding: 4px;
+    }
+  }
+
+  &-subsection {
+    &-header {
+      background-color: $infobox-header-bg;
+      padding: 2px;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  &-split {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+
+    &-item {
+      width: 50%;
+      padding: 8px;
+      border-right: 1px solid $border-color;
+      
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+
+      .flag-label {    
+        display: flex;
+        align-items: center;
+        vertical-align: middle;  
+        gap: 6px;
+
+        img {
+            height: 16px;
+            margin: 2px;
+            display: inline;
+            vertical-align: middle;
+        }
+      }
+
+      &::content {
+        margin: 2px;
+        vertical-align: middle;
+        line-height: 0.2;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}
