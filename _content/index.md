@@ -19,6 +19,9 @@ here you can find me talk about my projects, interests, ideas, or anything else 
 
 ---
 
+bluesky: [https://bsky.app/profile/jshi3.xyz](@jshi3.xyz)
+github: [https://github.com/lejshi3](@lejshi3)
+
 <div class="float-container">
     <div class="floating-box skewed">
         <h2>reach out!</h2>
