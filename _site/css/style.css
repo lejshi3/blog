@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&display=swap");
+body {
+  font-family: "Atkinson Hyperlegible", "Roboto", "Arial", "Helvetica", sans-serif;
+  background-color: #161616;
+  color: #c6c6c6;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+}
+
+header {
+  display: flex;
+  margin: 8px 12px 0px 12px;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+header div {
+  display: flex;
+  align-items: center;
+}
+header div.logo img {
+  flex: 0;
+  height: 24px;
+  margin: 2px 4px;
+  padding: 4px 4px 12px 4px;
+}
+header div.links {
+  flex: 1;
+}
+header div.links a {
+  flex: 1;
+  padding: 4px 16px 4px 16px;
+  margin: 2px 4px 4px 4px;
+  height: 100%;
+  border-radius: 4px 4px 4px 4px;
+  display: flex;
+  align-items: center;
+  color: #c6c6c6;
+  font-size: 13pt;
+  font-weight: normal;
+}
+header div.links a:hover {
+  background-color: #9a9a9a;
+  color: #161616;
+}
+header div.links a.current-page, header div.links a:active {
+  padding: 4px 16px 8px 16px;
+  margin: 2px 4px -2px 4px;
+  height: 100%;
+  border-radius: 4px 4px 0px 0px;
+}
+header div.links a:active {
+  background-color: #6e6e6e;
+  color: #161616;
+}
+header div.links a.current-page {
+  background-color: #c6c6c6;
+  color: #161616;
+  z-index: 1;
+}
+
+main {
+  display: flex;
+  flex: 1;
+  margin: 0px 12px 12px 12px;
+  border-radius: 8px;
+  border: solid 4px #c6c6c6;
+  background-color: #c6c6c6;
+  color: #161616;
+  box-shadow: #9a9a9a 4px 4px;
+  gap: 2px;
+  overflow: hidden;
+  max-width: 768px;
+}
+main h1, main h2, main h3, main p {
+  word-wrap: break-word;
+  word-break: normal;
+  margin-left: 0;
+  margin-right: 8px;
+  display: block;
+}
+main h1 {
+  color: #C73333;
+  line-height: 0.8;
+  font-size: 26pt;
+  margin-top: 26pt;
+  margin-bottom: 13pt;
+}
+main h2 {
+  color: #161616;
+  font-size: 18pt;
+  margin: 16pt initial;
+}
+main p {
+  color: #161616;
+  font-size: 13pt;
+  margin: 10pt initial;
+}
+main h3 {
+  font-family: "Overpass Mono", "Roboto Mono", monospace;
+}
+main hr {
+  border: dashed 1px #C73333;
+  width: 50%;
+  height: 0;
+  margin: 24pt auto;
+  padding: 0;
+}
+main br {
+  margin: 12pt auto;
+}
+main div {
+  border-radius: 4px;
+}
+main div.page-content {
+  flex: 2;
+  margin: 24px;
+  max-width: 38rem;
+}
+main div.page-content a {
+  color: #C73333;
+}
+main div.page-content a:visited {
+  color: #C75555;
+}
+main div.page-content a:active {
+  color: #424242;
+}
+main div.page-content a:hover {
+  color: #161616;
+}
+main div.page-content div.float-container {
+  display: block;
+  float: right;
+  align-items: center;
+  justify-content: center;
+  width: 42%;
+  margin: 24px;
+}
+@media (max-width: 600px) {
+  main div.page-content div.float-container {
+    float: none;
+    display: flex;
+    width: 100%;
+    margin: auto;
+  }
+}
+main div.page-content div.float-container img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 4px 4px #6e6e6e;
+}
+main div.page-content div.float-container img.skewed {
+  transform: rotate(2deg);
+}
+@media (max-width: 600px) {
+  main div.page-content div.float-container img {
+    width: 85%;
+  }
+  main div.page-content div.float-container img.skewed {
+    transform: rotate(0deg);
+  }
+}
+main div.page-content div.float-container div.floating-box {
+  width: 90%;
+  background-color: #424242;
+  box-shadow: 4px 4px #6e6e6e;
+  padding: 8px 16px;
+  border-radius: 4px;
+  box-shadow: 2px;
+  margin: 0;
+}
+main div.page-content div.float-container div.floating-box.skewed {
+  transform: rotate(-2deg);
+}
+main div.page-content div.float-container div.floating-box h1, main div.page-content div.float-container div.floating-box h2, main div.page-content div.float-container div.floating-box p {
+  color: #c6c6c6;
+  margin-right: 0;
+}
+main div.page-content div.float-container div.floating-box a {
+  color: #C73333;
+}
+main div.page-content div.float-container div.floating-box a:visited {
+  color: #C75555;
+}
+main div.page-content div.float-container div.floating-box a:active {
+  color: #6e6e6e;
+}
+main div.page-content div.float-container div.floating-box a:hover {
+  color: #9a9a9a;
+}
+main div.page-sidebar {
+  display: flex;
+  flex: 0 0 36px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #C73333;
+  color: #c6c6c6;
+  border-radius: 4px;
+}
+main div.page-sidebar h3 {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  margin: 0;
+  padding: 12px 6px 12px 2px;
+  flex: 0 0 auto;
+}
+main div.page-sidebar h3 a {
+  color: #c6c6c6;
+  text-decoration: none;
+}
+main div.page-sidebar span.filler {
+  flex: 1;
+}
+
+/*# sourceMappingURL=style.css.map */

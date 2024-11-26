@@ -19,7 +19,7 @@ export default function(eleventyConfig) {
   });
 
   // Copy img directory
-  eleventyConfig.addPassthroughCopy({ "content/img": "img" });
+  eleventyConfig.addPassthroughCopy({ "_content/img": "img" });
 
   // Ignore directories
   eleventyConfig.ignores.add("dist/**");
@@ -29,7 +29,7 @@ export default function(eleventyConfig) {
     dir: {
       input: "_content",    
       output: "_site",
-      layouts: "../_layouts"
+      layouts: "../_layouts",
     },
     permalinkBypassOutputDir: true,
     permalink: "{{ page.filePathStem }}.html"

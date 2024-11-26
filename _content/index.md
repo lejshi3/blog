@@ -1,11 +1,11 @@
 ---
 layout: base.njk
-title: Home
+title: home
 date: 2024-10-26T16:30-05:00
 ---
 
 <div class="float-container">
-    <img class="skewed" style="aspect-ratio: 1;" src="img/cardinal.jpg">
+    <img class="skewed" style="aspect-ratio: 1;" src="/img/cardinal.jpg">
 </div>
 
 # home
