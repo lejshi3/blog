@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # NPM Lock File
-package-lock.json
+yarn.lock
