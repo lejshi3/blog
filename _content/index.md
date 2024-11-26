@@ -19,8 +19,8 @@ here you can find me talk about my projects, interests, ideas, or anything else 
 
 ---
 
-bluesky: [https://bsky.app/profile/jshi3.xyz](@jshi3.xyz)
-github: [https://github.com/lejshi3](@lejshi3)
+bluesky: [@jshi3.xyz](https://bsky.app/profile/jshi3.xyz)
+github: [@lejshi3](https://github.com/lejshi3)
 
 <div class="float-container">
     <div class="floating-box skewed">
