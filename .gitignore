@@ -25,3 +25,4 @@ dist-ssr
 
 # NPM Lock File
 yarn.lock
+.env
