@@ -4,8 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build:tinacms" : "tinacms build",
-    "start:tinacms" : "tinacms build",
     "watch:sass": "sass --watch src:_site/css",
     "build:sass": "sass src:_site/css",
     "watch:eleventy": "eleventy --serve",
